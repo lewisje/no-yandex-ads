@@ -468,13 +468,13 @@ window.MutationObserver = window.MutationObserver || window.MozMutationObserver 
 (function (window, undefined) {
   'use strict';
   (function (s) {
-    for (var l = s.length; l--;) s[l - 1].parentNode.removeChild(s[l - 1]);
+    for (var l in s) s[l].parentNode.removeChild(s[l]);
   })(document.querySelectorAll('.serp-adv,.b-spec-adv'));
   function removeAds() {
     var s = document.querySelectorAll('.serp-block');
-    for (var l = s.length; l--;)
-      if (s[l - 1].querySelector('.serp-item__label'))
-        s[l - 1].parentNode.removeChild(s[l - 1]);
+    for (var l in s)
+      if (s[l].querySelector('.serp-item__label'))
+        s[l].parentNode.removeChild(s[l]);
   }
   (function(s){
     if (s) (new MutationObserver(removeAds)).observe(s, {childList: true});
