@@ -9,6 +9,10 @@
 // @grant       none
 // @match       http://*/yandsearch?*
 // @match       https://*/yandsearch?*
+// @match       http://yandex.ru/search/*
+// @match       http://*.yandex.ru/search/*
+// @match       https://yandex.ru/search/*
+// @match       https://*.yandex.ru/search/*
 // @run-at      document-end
 // ==/UserScript==
 
